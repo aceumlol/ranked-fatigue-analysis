@@ -1,0 +1,25 @@
+# python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# db
+*.db
+*.sqlite
+
+# logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# files
+data/exports/*.csv
+models/*.pkl
+reports/*.md

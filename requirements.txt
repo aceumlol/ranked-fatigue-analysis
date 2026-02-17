@@ -1,0 +1,15 @@
+python-dotenv>=1.0.0
+psycopg2-binary
+sqlalchemy>=2.0.0
+pandas>=2.2.0
+numpy
+statsmodels
+scikit-learn
+scipy
+matplotlib
+seaborn
+requests
+loguru
+tqdm
+xgboost
+joblib
