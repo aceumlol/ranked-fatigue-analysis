@@ -15,7 +15,7 @@ import time
 MATCHES_PER_PLAYER = 100
 BATCH_SIZE = 100
 RATE_LIMIT_DELAY = 0.2
-SEASON_START_TIMESTAMP = 1704672000  # 8.01.2026
+SEASON_START_TIMESTAMP = 1767830400 # 8.01.2026
 
 def ingest_matches_for_player(player: Player, client: RiotAPIClient, db) -> int:
     logger.info(f"Processing {player.summoner_name}")
