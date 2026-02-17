@@ -61,7 +61,7 @@ It ingests ~250 ranked matches per player (Challenger/GM EUW), calculates a bunc
 * **Session degradation is real:** Deaths increase measurably after game 5...
 ![](data/visualizations/session_resource_shares.png)
 
-* **Late night penalty:** Playing 2-6 AM costs ~0.2 extra deaths...
+* **Timing matters, but not how you'd expect:** Late night slots don't hurt performance — Challenger players appear fully nocturnal.
 ![](data/visualizations/performance_heatmap_24h.png)
 
 * **Why deaths matter** (context)
