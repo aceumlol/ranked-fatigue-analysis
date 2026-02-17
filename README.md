@@ -11,12 +11,12 @@ Basically: Can we predict a performance drop *before* the game starts, based pur
 ![session degradation](data/visualizations/session_performance_impact_detailed.png)
 
 ## What it actually does
-It ingests ~250 ranked matches per player (Challenger/GM EUW), calculates a bunch of fatigue features, and runs some ML models.
+It ingests ~100 ranked matches per player (Challenger/GM EUW), calculates a bunch of fatigue features, and runs some ML models.
 
 * **Fatigue Score:** A 0-1 score based on game density, lack of sleep, and loss streaks.
 * **Performance Prediction:**
-    * **Classification:** Predicts if deaths will spike >20% above baseline. (ROC-AUC ~0.59). It's not perfect, but it's better than random guessing without using in-game stats.
-    * **Regression:** Predicts the magnitude of performance drop (R² 0.31).
+    * **Classification:** Predicts if deaths will spike >20% above baseline. Best model: Logistic Regression (AUC 0.60). Top predictors were rolling death baseline and games played in the last 24h — not raw fatigue score, which was surprising.
+    * **Regression:** Predicts magnitude of performance change (XGBoost, R²=0.30). Previous game deaths dominated feature importance at 0.39 — your last game is the strongest signal for the next one.
 * **Analysis:** Generates charts for session degradation, "revenge gaming" patterns, and hourly performance.
 
 **Note on the model:** My first iteration hit 0.7 AUC but it was leaking game duration (longer games = more deaths). I removed that feature, which tanked the score to 0.59, but at least it's honest now.
